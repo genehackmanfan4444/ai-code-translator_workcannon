@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import PopOutPanel from './PopOutPanel';
-import FileExplorer from '@/components/FileExplorer';
-import AdminPanel from '@/components/AdminPanel';
+import PopOutPanel from '@/components/ribbon/PopOutPanel';
+import FileExplorer from '@/components/ribbon/FileExplorer';
+import AdminPanel from '@/components/ribbon/AdminPanel';
 
 const LeftRibbon = () => {
   const [activePanel, setActivePanel] = useState<string | null>(null);
