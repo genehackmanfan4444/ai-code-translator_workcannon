@@ -8,6 +8,7 @@ import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import LeftRibbon from '@/components/ribbon/LeftRibbon';
 
+
 export default function Home() {
   const [inputLanguage, setInputLanguage] = useState<string>('Consulting Proposal');
 
@@ -130,17 +131,19 @@ export default function Home() {
   }, []);
 
   return (
-    <>
-      <Head>
-        <title>Code Translator</title>
-        <meta
-          name="description"
-          content="Use AI to translate code from one language to another."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="flex h-full min-h-screen flex-col items-center bg-[#0E1117] px-4 pb-20 text-neutral-200 sm:px-10">
+  <>
+    <Head>
+      <title>WorkCannnon</title>
+      <meta
+        name="description"
+        content="Think with a hammer, work with a cannon"
+      />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
+    <div className="flex h-full min-h-screen flex-col items-center bg-[#0E1117] px-4 pb-20 text-neutral-200 sm:px-10">
+      <LeftRibbon />
+      <div className="w-full">
         <div className="mt-10 flex flex-col items-center justify-center sm:mt-20">
           <div className="text-4xl font-bold">WorkCannon</div>
         </div>
@@ -153,7 +156,7 @@ export default function Home() {
           <ModelSelect model={model} onChange={(value) => setModel(value)} />
 
           <button
-            className="w-[140px] cursor-pointer rounded-md bg-violet-500 px-4 py-2 font-bold hover:bg-violet-600 active:bg-violet-700"
+            className="w-[140px] cursor-pointer rounded-md bg-violet-500 px-4 py-2 font-bold hover:bg-blue-600 active:bg-blue-700"
             onClick={() => handleTranslate()}
             disabled={loading}
           >
@@ -166,7 +169,7 @@ export default function Home() {
             ? 'Translating...'
             : hasTranslated
             ? 'Output copied to clipboard!'
-            : 'Enter some code and click "Translate"'}
+            : 'Turn ideas into perfectly formatted professional documents'}
         </div>
 
         <div className="mt-6 flex w-full max-w-[1200px] flex-col justify-between sm:flex-row sm:space-x-4">
@@ -222,6 +225,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </>
-  );
+    </div>
+  </>
+);
 }
