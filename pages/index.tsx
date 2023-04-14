@@ -6,9 +6,11 @@ import { TextBlock } from '@/components/TextBlock';
 import { OpenAIModel, TranslateBody } from '@/types/types';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
+import LeftRibbon from '@/components/ribbon/LeftRibbon';
 
 export default function Home() {
-  const [inputLanguage, setInputLanguage] = useState<string>('JavaScript');
+  const [inputLanguage, setInputLanguage] = useState<string>('Consulting Proposal');
+
   const [outputLanguage, setOutputLanguage] = useState<string>('Python');
   const [inputCode, setInputCode] = useState<string>('');
   const [outputCode, setOutputCode] = useState<string>('');
@@ -140,7 +142,7 @@ export default function Home() {
       </Head>
       <div className="flex h-full min-h-screen flex-col items-center bg-[#0E1117] px-4 pb-20 text-neutral-200 sm:px-10">
         <div className="mt-10 flex flex-col items-center justify-center sm:mt-20">
-          <div className="text-4xl font-bold">AI Code Translator</div>
+          <div className="text-4xl font-bold">WorkCannon</div>
         </div>
 
         <div className="mt-6 text-center text-sm">
@@ -169,7 +171,7 @@ export default function Home() {
 
         <div className="mt-6 flex w-full max-w-[1200px] flex-col justify-between sm:flex-row sm:space-x-4">
           <div className="h-100 flex flex-col justify-center space-y-2 sm:w-2/4">
-            <div className="text-center text-xl font-bold">Input</div>
+            <div className="text-center text-xl font-bold">Prompts</div>
 
             <LanguageSelect
               language={inputLanguage}
