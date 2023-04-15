@@ -133,7 +133,7 @@ export default function Home() {
   return (
   <>
     <Head>
-      <title>WorkCannnon</title>
+      <title>AICodeTranslator</title>
       <meta
         name="description"
         content="Think with a hammer, work with a cannon"
@@ -145,7 +145,7 @@ export default function Home() {
       <LeftRibbon />
       <div className="w-full">
         <div className="mt-10 flex flex-col items-center justify-center sm:mt-20">
-          <div className="text-4xl font-bold">WorkCannon</div>
+          <div className="text-4xl font-bold">WC</div>
         </div>
 
         <div className="mt-6 text-center text-sm">
