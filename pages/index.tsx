@@ -6,7 +6,7 @@ import { TextBlock } from '@/components/TextBlock';
 import { OpenAIModel, TranslateBody } from '@/types/types';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
-import LeftRibbon from '@/components/ribbon/LeftRibbon';
+import { LeftRibbon } from '@/components/ribbon/LeftRibbon';
 
 
 export default function Home() {
